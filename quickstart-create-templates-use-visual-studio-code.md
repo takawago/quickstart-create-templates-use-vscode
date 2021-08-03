@@ -1,17 +1,4 @@
----
-title: テンプレートを作成する - Visual Studio Code
-description: Visual Studio Code と Azure Resource Manager ツールの拡張機能を使用して Azure Resource Manager テンプレート (ARM テンプレート) を操作する方法について説明します。
-author: neilpeterson
-ms.date: 08/09/2020
-ms.topic: quickstart
-ms.author: nepeters
-ms.openlocfilehash: 3e41d4f6f8b8aeb2be376ae1385189fe02e9b897
-ms.sourcegitcommit: f28ebb95ae9aaaff3f87d8388a09b41e0b3445b5
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "102504659"
----
+
 # <a name="quickstart-create-arm-templates-with-visual-studio-code"></a>クイックスタート: Visual Studio Code を使用して ARM テンプレートを作成する
 
 Visual Studio Code 用の Azure Resource Manager ツールでは、言語サポート、リソース スニペット、およびリソース オートコンプリートが提供されます。 これらのツールは、Azure Resource Manager テンプレート (ARM テンプレート) を作成および検証するのに役立ちます。 このクイックスタートでは、拡張機能を使用して ARM テンプレートを一から作成します。 操作では、ARM テンプレート スニペット、検証、入力候補、パラメーター ファイルのサポートなどの拡張機能を使用します。
@@ -121,17 +108,17 @@ ARM テンプレートに戻ると、値がパラメーターの条件を満た�
 # <a name="cli"></a>[CLI](#tab/CLI)
 
 ```azurecli
-az group create --name arm-vscode --location eastus
+az group create --name <リソースグループ名> --location japaneast
 
-az deployment group create --resource-group arm-vscode --template-file azuredeploy.json --parameters azuredeploy.parameters.json
+az deployment group create --resource-group <リソースグループ名> --template-file azuredeploy.json --parameters azuredeploy.parameters.json
 ```
 
 # <a name="powershell"></a>[PowerShell](#tab/PowerShell)
 
 ```azurepowershell
-New-AzResourceGroup -Name arm-vscode -Location eastus
+New-AzResourceGroup -Name <リソースグループ名> -Location japaneast
 
-New-AzResourceGroupDeployment -ResourceGroupName arm-vscode -TemplateFile ./azuredeploy.json -TemplateParameterFile ./azuredeploy.parameters.json
+New-AzResourceGroupDeployment -ResourceGroupName <リソースグループ名> -TemplateFile ./azuredeploy.json -TemplateParameterFile ./azuredeploy.parameters.json
 ```
 ---
 
@@ -142,17 +129,13 @@ Azure リソースが不要になったら、Azure CLI か Azure PowerShell の�
 # <a name="cli"></a>[CLI](#tab/CLI)
 
 ```azurecli
-az group delete --name arm-vscode
+az group delete --name <リソースグループ名>
 ```
 
 # <a name="powershell"></a>[PowerShell](#tab/PowerShell)
 
 ```azurepowershell
-Remove-AzResourceGroup -Name arm-vscode
+Remove-AzResourceGroup -Name <リソースグループ名>
 ```
 ---
 
-## <a name="next-steps"></a>次のステップ
-
-> [!div class="nextstepaction"]
-> [初心者向けチュートリアル](./template-tutorial-create-first-template.md)
